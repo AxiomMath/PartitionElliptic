@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\tcm}{\tau_{\mathrm{CM}}}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{keyformula}{Key Formula}
+
+\title{\bf Two Key Identities for Formal Verification}
+
+
+\begin{document}
+\maketitle
+
+The companion paper reinterprets the Bruinier--Ono finite formula for the partition
+number $p(n)$ through the geometry of elliptic curves with complex multiplication. 
+Two identities in this development are new and rest on algebraic manipulations specific to the
+partition-theoretic setting. The remaining steps of the paper are either classical (the
+theory of modular and weak Maass forms, complex multiplication, supersingular reduction, the
+Watson--Atkin recursions) or elementary rearrangements. Accordingly, we single out only these
+two identities for formal verification here; we do not attempt to formalize the paper as a
+whole, and the classical inputs are used as established.
+We verify these two identities because they are exactly the points at which a hidden sign,
+constant, or normalization error could enter unnoticed, and where an independent machine check
+therefore adds genuine assurance. 
+
+We work over $\C$. Both identities are equalities of complex numbers obtained by evaluating
+certain functions at a fixed $\tau\in\HH$; only the values enter, so we introduce those values
+directly.
+
+\begin{defn}[Ground data]
+Fix $y\in\R$ with $y>0$ (read as $y=\operatorname{Im}\tau$), and complex numbers
+\[
+E_2,\ E_4,\ E_6,\ F,\ DF,\ J \in \C,
+\qquad
+\Phi_Y,\ \Phi_{XX},\ \Phi_{XY},\ \Phi_{YY} \in \C,
+\]
+with $E_4\neq0$, $J\neq1728$, and $\Phi_Y\neq0$. Here $DF$ denotes the value of
+$\tfrac{1}{2\pi i}F'$, and $\Phi_Y,\Phi_{XX},\Phi_{XY},\Phi_{YY}$ denote the values at the
+diagonal point $(J,J)$ of the corresponding partial derivatives of the modular polynomial
+$\Phi_N(X,Y)$, where $N=|\Delta_n|=24n-1$.
+\end{defn}
+
+\begin{defn}[Nonholomorphic completion]
+\[
+E_2^{*}\ :=\ E_2-\frac{3}{\pi\,y}.
+\]
+\end{defn}
+
+\begin{defn}[Weight-$k$ operators]
+For $k\in\mathbb{Z}$,
+\[
+\partial_k F\ :=\ DF-\frac{k}{4\pi\,y}\,F,
+\qquad
+\vartheta_k F\ :=\ DF-\frac{k}{12}\,E_2\,F.
+\]
+\end{defn}
+
+\begin{defn}[Weak Maass value]
+\[
+P\ :=\ -\,\partial_{-2}F.
+\]
+\end{defn}
+
+\begin{defn}[Diagonal CM tangent]
+\[
+\tcm(J)\ :=\ \frac{\Phi_{YY}-\Phi_{XY}}{\Phi_Y}.
+\]
+\end{defn}
+
+\section*{The two key identities}
+
+\begin{keyformula}\label{Formula1}
+\[
+P\ =\ -\,\vartheta_{-2}F\ +\ \tfrac16\,E_2^{*}\,F.
+\]
+\end{keyformula}
+
+\begin{keyformula}\label{Formula2}
+If $\Phi_{XX}=\Phi_{YY}$, then
+\[
+\frac{\tfrac12\Phi_{XX}-\Phi_{XY}+\tfrac12\Phi_{YY}}{\Phi_Y}
+\ =\ \tcm(J).
+\]
+\end{keyformula}
+
+\end{document}
