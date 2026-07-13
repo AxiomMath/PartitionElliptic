@@ -8,7 +8,7 @@ elliptic curves* (`Ono_PofN.tex`).
 
 Working with the values, at a fixed point $\tau$ of the upper half-plane, of the relevant
 modular objects — the quasimodular $E_2$ and its nonholomorphic completion
-$E_2^{*} = E_2 - \tfrac{3}{\pi y}$ (with $y = \operatorname{Im}\tau > 0$), the weight-$k$
+$E_2^{*} = E_2 - \tfrac{3}{\pi y}$ (with $y = \mathrm{Im}\tau > 0$), the weight-$k$
 operators $\partial_k F = DF - \tfrac{k}{4\pi y}F$ and $\vartheta_k F = DF - \tfrac{k}{12}E_2 F$,
 the weak Maass value $P = -\partial_{-2}F$, and the diagonal CM tangent
 $\tau_{\mathrm{CM}}(J) = \tfrac{\Phi_{YY} - \Phi_{XY}}{\Phi_Y}$ — the formalised statements are:
