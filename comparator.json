@@ -1,0 +1,14 @@
+{
+  "challenge_module": "output.problem",
+  "solution_module": "output.solution",
+  "theorem_names": [
+    "key_formula_one",
+    "key_formula_two"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": false
+}
