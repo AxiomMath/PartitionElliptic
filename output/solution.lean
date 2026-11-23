@@ -1,6 +1,8 @@
-import Mathlib
+module
 
-/-
+public import Mathlib
+
+/-!
 # Problem Description
 
 All quantities below are complex numbers, except `y` which is a positive real
@@ -37,6 +39,8 @@ Key Formula 2:  If `Phi_XX = Phi_YY`, then
 Both statements are equalities of complex numbers that follow by elementary
 algebra from the definitions.
 -/
+
+@[expose] public section
 
 section KeyFormulas
 
@@ -78,10 +82,12 @@ theorem key_formula_one :
 
 /-- **Key Formula 2.** If `Phi_XX = Phi_YY`, then
 `((1/2) Phi_XX - Phi_XY + (1/2) Phi_YY) / Phi_Y = tau_CM(J)`. -/
-theorem key_formula_two (hΦY : ΦY ≠ 0) (h : ΦXX = ΦYY) :
+theorem key_formula_two (_hΦY : ΦY ≠ 0) (h : ΦXX = ΦYY) :
     ((1 / 2) * ΦXX - ΦXY + (1 / 2) * ΦYY) / ΦY = tauCM ΦY ΦXY ΦYY := by
   unfold tauCM
   subst h
   ring
 
 end KeyFormulas
+
+end

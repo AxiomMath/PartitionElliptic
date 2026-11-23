@@ -22,7 +22,7 @@ definitions; they are singled out for formal verification precisely because they
 sign, constant, or normalization error could enter unnoticed.
 
 The proofs were produced by [AxiomProver](https://axiommath.ai/) and are fully sorry-free.
-They were developed and verified using **Lean 4.28.0**. Compatibility with earlier or later
+They were developed and verified using **Lean 4.36.0**. Compatibility with earlier or later
 versions is not guaranteed due to the evolving nature of the Lean 4 compiler and its core
 libraries.
 

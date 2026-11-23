@@ -1,6 +1,8 @@
-import Mathlib
+module
 
-/-
+public import Mathlib
+
+/-!
 # Problem Description
 
 All quantities below are complex numbers, except `y` which is a positive real
@@ -37,6 +39,8 @@ Key Formula 2:  If `Phi_XX = Phi_YY`, then
 Both statements are equalities of complex numbers that follow by elementary
 algebra from the definitions.
 -/
+
+@[expose] public section
 
 section KeyFormulas
 
@@ -76,3 +80,5 @@ theorem key_formula_two (hΦY : ΦY ≠ 0) (h : ΦXX = ΦYY) :
   sorry
 
 end KeyFormulas
+
+end
